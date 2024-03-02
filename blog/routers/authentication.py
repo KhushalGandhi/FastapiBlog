@@ -23,3 +23,4 @@ def login(request: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(
     access_token = token.create_access_token(data={"sub": user.email})
 
     return access_token
+
